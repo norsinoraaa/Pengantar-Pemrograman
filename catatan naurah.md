@@ -7,4 +7,19 @@
     Matriks C harus memiliki invers 
     Dimensi matriks harus cocok untuk perkalian.
 ## Rumus
-    
+   $$[A + BCD]^{-1} = A^{-1} - A^{-1}B[C^{-1} + DA^{-1}B]^{-1}DA^{-1}$$      
+   **Keterangan**
+1. $A$ (Matriks Utama)   
+   Dimensi: $n \times n$.
+   Syarat: Harus memiliki invers ($A^{-1}$) atau bersifat non-singular.
+   Peran: Mewakili sistem awal atau basis data yang besar.
+2. $C$ (Matriks Modifikasi)  
+    Dimensi: $k \times k$.
+    Syarat: Harus memiliki invers ($C^{-1}$).
+    Peran: Mewakili inti dari perubahan yang ditambahkan ke sistem.                    Biasanya $k$ jauh lebih kecil dari $n$ ($k \ll n$).
+3. $B$ (Matriks Penghubung Depan)  
+    Dimensi: $n \times k$.
+    Peran: Menyesuaikan dimensi dari ruang modifikasi ke ruang sistem utama.
+4.  $D$ (Matriks Penghubung Belakang) 
+    Dimensi: $k \times n$.
+    Peran: Menyesuaikan dimensi kembali dari ruang sistem utama ke ruang               modifikasi.
