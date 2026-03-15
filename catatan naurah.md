@@ -7,7 +7,10 @@
     Matriks C harus memiliki invers 
     Dimensi matriks harus cocok untuk perkalian.
 ## Rumus
-    **Keterangan**
+$$
+(A + BCD)^{-1} = A^{-1} - A^{-1}B(C^{-1}+DA^{-1}B)^{-1}DA^{-1}
+$$
+Keterangan
 1. $A$ (Matriks Utama)   
    Dimensi: $n \times n$.
    Syarat: Harus memiliki invers ($A^{-1}$) atau bersifat non-singular.
