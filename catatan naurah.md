@@ -6,10 +6,9 @@
     Matriks A harus memiliki invers
     Matriks C harus memiliki invers 
     Dimensi matriks harus cocok untuk perkalian.
-## Rumus
-$$
-(A + BCD)^{-1} = A^{-1} - A^{-1}B(C^{-1}+DA^{-1}B)^{-1}DA^{-1}
-$$
+## Rumus Matrix Inversion Lemma
+$$(A + BCD)^{-1} = A^{-1} - A^{-1}B(C^{-1}+DA^{-1}B)^{-1}DA^{-1}$$ 
+
 Keterangan
 1. $A$ (Matriks Utama)   
    Dimensi: $n \times n$.
@@ -25,3 +24,31 @@ Keterangan
 4.  $D$ (Matriks Penghubung Belakang) 
     Dimensi: $k \times n$.
     Peran: Menyesuaikan dimensi kembali dari ruang sistem utama ke ruang modifikasi.
+## Contoh Soal Matrix Inversion Lemma
+Diketahui:
+
+$$A = \begin{bmatrix} 4 & 0 \\ 0 & 4 \end{bmatrix}$$
+
+$$B = \begin{bmatrix} 1 \\ 0 \end{bmatrix}$$
+  
+$$C = [1]$$
+  
+$$D = \begin{bmatrix} 1 & 0 \end{bmatrix}$$
+  
+**Penyelesaian:**
+
+1. **Hitung Invers A:**
+   
+$$A^{-1} = \begin{bmatrix} 0.25 & 0 \\ 0 & 0.25 \end{bmatrix}$$
+
+3. **Hitung Operasi Internal ($DA^{-1}B$):**
+   
+$$DA^{-1}B = [0.25]$$
+
+5. **Hitung Invers Inti:**
+   
+$$[1 + 0.25]^{-1} = [0.8]$$
+
+7. **Hasil Akhir ($M^{-1}$):**
+   
+$$M^{-1} = \begin{bmatrix} 0.2 & 0 \\ 0 & 0.25 \end{bmatrix}$$
