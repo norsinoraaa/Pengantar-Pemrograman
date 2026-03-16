@@ -1,3 +1,12 @@
+# Geofisika Matematika Kelompok 4B 
+* **Dela Agreni Suarang** (NIM - H061251042)
+* **Siti Naurah Fatinah Malihah** (NIM - H061251047)
+* **Josua Aido Arta Sitorus** (NIM - H061251052)
+* **Hijrah** (NIM - H061251057)
+* **Aulia Zezarya** (NIM - H061251063)
+* **Syahwa Nur Fadiah MS** (NIM - H061251070)
+* **Rizka Dwi Elvira** (NIM - H061251080)
+
 # Matrix Inversion Lemma
 ## Definisi Matrix Inversion Lemma
     Matrix Inversion Lemma adalah rumus yang digunakan untuk menghitung invers dari matriks yang berbentuk penjumlahan matriks tanpa harus menghitung invers besar secara langsung. 
@@ -25,3 +34,117 @@ Keterangan
 4.  $D$ (Matriks Penghubung Belakang) 
     Dimensi: $k \times n$.
     Peran: Menyesuaikan dimensi kembali dari ruang sistem utama ke ruang modifikasi.
+## Contoh Soal
+### Contoh Pembuktian Matrix Inversion Lemma
+
+Diketahui rumus **Matrix Inversion Lemma**:
+
+$$
+(A + BCD)^{-1} = A^{-1} - A^{-1}B(C^{-1}+DA^{-1}B)^{-1}DA^{-1}
+$$
+
+Untuk membuktikan bahwa rumus tersebut benar, kita kalikan ruas kiri dengan matriks $(A + BCD)$.
+
+---
+
+### Langkah 1
+
+$$
+\left[A^{-1} - A^{-1}B(C^{-1}+DA^{-1}B)^{-1}DA^{-1}\right](A+BCD)
+$$
+
+---
+
+### Langkah 2
+
+Gunakan sifat distributif perkalian matriks.
+
+$$
+= A^{-1}A + A^{-1}BCD - A^{-1}B(C^{-1}+DA^{-1}B)^{-1}DA^{-1}A - A^{-1}B(C^{-1}+DA^{-1}B)^{-1}DA^{-1}BCD
+$$
+
+---
+
+### Langkah 3
+
+Sederhanakan beberapa bagian matriks.
+
+Karena:
+
+$$
+A^{-1}A = I
+$$
+
+maka diperoleh:
+
+$$
+= I + A^{-1}BCD - A^{-1}B(C^{-1}+DA^{-1}B)^{-1}D - A^{-1}B(C^{-1}+DA^{-1}B)^{-1}DA^{-1}BCD
+$$
+
+---
+
+### Langkah 4
+
+Gunakan identitas:
+
+$$
+D = C^{-1}C D
+$$
+
+sehingga diperoleh:
+
+$$
+= I + A^{-1}BCD - A^{-1}B(C^{-1}+DA^{-1}B)^{-1}C^{-1}CD - A^{-1}B(C^{-1}+DA^{-1}B)^{-1}DA^{-1}BCD
+$$
+
+---
+
+### Langkah 5
+
+Gabungkan faktor matriks:
+
+$$
+= I + A^{-1}BCD - A^{-1}B(C^{-1}+DA^{-1}B)^{-1}(C^{-1}+DA^{-1}B)CD
+$$
+
+---
+
+### Langkah 6
+
+Karena:
+
+$$
+(C^{-1}+DA^{-1}B)^{-1}(C^{-1}+DA^{-1}B) = I
+$$
+
+maka:
+
+$$
+= I + A^{-1}BCD - A^{-1}BCD
+$$
+
+---
+
+### Hasil Akhir
+
+$$
+= I
+$$
+
+---
+
+## Kesimpulan
+
+Karena
+
+$$
+(A + BCD)^{-1}(A + BCD) = I
+$$
+
+maka terbukti bahwa:
+
+$$
+(A + BCD)^{-1} = A^{-1} - A^{-1}B(C^{-1}+DA^{-1}B)^{-1}DA^{-1}
+$$
+
+yang disebut sebagai **Matrix Inversion Lemma**.
